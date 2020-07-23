@@ -28,3 +28,5 @@ state.backend: filesystem
 state.checkpoints.dir: file:///checkpoint-dir
 state.backend.incremental: true
 taskmanager.memory.process.size: 1g
+taskmanager.data.port: 6121
+taskmanager.rpc.port: 6122
