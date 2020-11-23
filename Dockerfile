@@ -15,7 +15,7 @@
 
 # Based on https://github.com/apache/flink-statefun-docker/blob/master/2.1.0/Dockerfile and modified for Raspberry Pi
 
-FROM fransking/flink:1.10.1-arm32v7
+FROM fransking/flink:1.11.1-arm32v7
 
 ENV ROLE worker
 ENV MASTER_HOST localhost
@@ -29,7 +29,7 @@ RUN rm -fr $FLINK_HOME/lib/flink-table*jar
 COPY flink-distribution/ $FLINK_HOME/
 
 # Install Stateful Functions dependencies in Flink lib
-ENV STATEFUN_VERSION=2.1.0
+ENV STATEFUN_VERSION=2.2.1
 ENV DIST_JAR_URL=https://repo.maven.apache.org/maven2/org/apache/flink/statefun-flink-distribution/${STATEFUN_VERSION}/statefun-flink-distribution-${STATEFUN_VERSION}.jar \
     CORE_JAR_URL=https://repo.maven.apache.org/maven2/org/apache/flink/statefun-flink-core/${STATEFUN_VERSION}/statefun-flink-core-${STATEFUN_VERSION}.jar
 
