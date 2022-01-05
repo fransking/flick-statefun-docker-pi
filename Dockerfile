@@ -15,7 +15,7 @@
 
 # Based on https://github.com/apache/flink-statefun-docker/blob/master/2.1.0/Dockerfile and modified for Raspberry Pi
 
-FROM fransking/flink:1.12.2-arm32v7
+FROM fransking/flink:1.12.7-arm32v7
 
 ENV ROLE worker
 ENV MASTER_HOST localhost
